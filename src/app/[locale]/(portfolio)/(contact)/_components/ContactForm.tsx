@@ -8,13 +8,20 @@ import { Label } from "@/components/ui/label";
 import { useFormState, useFormStatus } from "react-dom";
 import { useEffect, useRef } from "react";
 import { useToast } from "@/components/ui/use-toast";
+import { useTranslations } from "next-intl";
 
-function SubmitButton() {
+function SubmitButton({
+  text,
+  pendingText,
+}: {
+  text: string;
+  pendingText: string;
+}) {
   const { pending } = useFormStatus();
 
   return (
     <Button type="submit" disabled={pending} aria-disabled={pending}>
-      {pending ? "Sending..." : "Submit"}
+      {pending ? pendingText : text}
     </Button>
   );
 }
@@ -26,14 +33,14 @@ export default function ContactForm() {
     error: { name: [""], email: [""], message: [""] },
   });
   const ref = useRef<HTMLFormElement>(null);
+  const t = useTranslations("Index.Contact.form");
 
   useEffect(() => {
     if (state.sucess === true) {
       ref.current?.reset();
       toast({
-        title: "Message Sent!",
-        description:
-          "Thanks for reaching out! Your message has been successfully sent. I'll get back to you as soon as possible.",
+        title: t("toast.title"),
+        description: t("toast.description"),
       });
     }
   }, [state, toast]);
@@ -41,12 +48,12 @@ export default function ContactForm() {
   return (
     <form action={formAction} ref={ref} className="space-y-8 w-full max-w-xl">
       <div>
-        <Label htmlFor="name">Name</Label>
+        <Label htmlFor="name">{t("name.label")}</Label>
         <Input
           type="text"
           id="name"
           name="name"
-          placeholder="Your name"
+          placeholder={t("name.placeholder")}
           required
         />
         {state?.error?.name && (
@@ -54,12 +61,12 @@ export default function ContactForm() {
         )}
       </div>
       <div>
-        <Label htmlFor="email">Email</Label>
+        <Label htmlFor="email">{t("email.label")}</Label>
         <Input
           type="email"
           id="email"
           name="email"
-          placeholder="example@email.com"
+          placeholder={t("email.placeholder")}
           required
         />
         {state?.error?.email && (
@@ -67,11 +74,11 @@ export default function ContactForm() {
         )}
       </div>
       <div>
-        <Label htmlFor="message">Message</Label>
+        <Label htmlFor="message">{t("message.label")}</Label>
         <Textarea
           id="message"
           name="message"
-          placeholder="Let me know what you have in mind"
+          placeholder={t("message.placeholder")}
           className="resize-none"
           required
         />
@@ -79,7 +86,10 @@ export default function ContactForm() {
           <div className="text-destructive">{state.error.message}</div>
         )}
       </div>
-      <SubmitButton />
+      <SubmitButton
+        text={t("submitButton.default")}
+        pendingText={t("submitButton.pending")}
+      />
     </form>
   );
 }

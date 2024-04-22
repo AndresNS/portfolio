@@ -1,0 +1,59 @@
+{
+  "Languages": { "name": "Language" },
+  "Header": {
+    "about": "About",
+    "stack": "Stack",
+    "resume": "Resume",
+    "projects": "Projects",
+    "contact": "Let's Talk!"
+  },
+  "Index": {
+    "Hero": {
+      "role": "Full-Stack Developer",
+      "description": "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat."
+    },
+    "Stack": {
+      "title": "My Stack",
+      "description": "lorem"
+    },
+    "Experience": {
+      "title": "Experience"
+    },
+    "Projects": {
+      "title": "Projects",
+      "description": "lorem",
+      "list": {
+        "0": {
+          "type": "Website",
+          "title": "JSON Stringifier",
+          "description": "JSON String stringifier"
+        },
+        "1": {
+          "type": "Mobile App",
+          "title": "TCG Life Counter",
+          "description": "Life counter app"
+        }
+      }
+    },
+    "Contact": {
+      "title": "Contact",
+      "description": "lorem",
+      "form": {
+        "name": { "label": "Name", "placeholder": "Your name" },
+        "email": {
+          "label": "Email",
+          "placeholder": "example@email.com"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Let me know what you have in mind"
+        },
+        "submitButton": { "default": "Submit", "pending": "Sending..." },
+        "toast": {
+          "title": "Message sent!",
+          "description": "Thanks for reaching out! Your message has been successfully sent. I'll get back to you as soon as possible."
+        }
+      }
+    }
+  }
+}

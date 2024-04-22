@@ -15,11 +15,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params: { locale },
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: string };
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang={locale} className="scroll-smooth">
       <body
         className={cn("bg-background font-sans antialiased", inter.variable)}
       >

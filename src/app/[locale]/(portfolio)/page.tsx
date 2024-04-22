@@ -4,8 +4,17 @@ import TechStack from "./(resume)/TechStack";
 import Projects from "./(projects)/Projects";
 import ContactForm from "./(contact)/_components/ContactForm";
 import Footer from "./_components/Footer";
+import {
+  NextIntlClientProvider,
+  useMessages,
+  useTranslations,
+} from "next-intl";
+import pick from "lodash/pick";
 
 export default function Portfolio() {
+  const t = useTranslations("Index");
+  const messages = useMessages();
+
   return (
     <>
       {/* Hero */}
@@ -16,10 +25,9 @@ export default function Portfolio() {
         id="stack"
         className="min-h-screen flex flex-col items-center justify-center"
       >
-        <h2 className="font-bold md:text-5xl mb-6">My Stack</h2>
+        <h2 className="font-bold md:text-5xl mb-6">{t("Stack.title")}</h2>
         <p className="text-center max-w-[750px] text-lg mb-20 sm:text-xl">
-          Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-          cillum sint consectetur cupidatat.
+          {t("Stack.description")}
         </p>
         <div className="flex gap-12 mx-auto max-w-[980px] flex-wrap justify-center">
           <TechStack />
@@ -29,9 +37,9 @@ export default function Portfolio() {
       {/* Resume */}
       <section
         id="resume"
-        className="min-h-screen flex flex-col gap-12 items-center justify-center p-28"
+        className="min-h-screen flex flex-col gap-12 items-center justify-center pt-28"
       >
-        <h2 className="font-bold md:text-5xl mb-6">Experience</h2>
+        <h2 className="font-bold md:text-5xl mb-6">{t("Experience.title")}</h2>
         <Experiences />
       </section>
 
@@ -40,10 +48,9 @@ export default function Portfolio() {
         id="projects"
         className="min-h-screen flex flex-col gap-12 items-center justify-center"
       >
-        <h2 className="font-bold md:text-5xl mb-6">Projects</h2>
+        <h2 className="font-bold md:text-5xl mb-6">{t("Projects.title")}</h2>
         <p className="text-center max-w-[750px] text-lg mb-20 sm:text-xl">
-          Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-          cillum sint consectetur cupidatat.
+          {t("Projects.description")}
         </p>
 
         <div className="container mx-auto">
@@ -54,14 +61,15 @@ export default function Portfolio() {
       {/* Contact */}
       <section
         id="contact"
-        className="container mx-auto flex flex-col gap-12 items-center p-28"
+        className="container mx-auto flex flex-col gap-12 items-center pt-28"
       >
-        <h2 className="font-bold md:text-5xl mb-6">Contact</h2>
+        <h2 className="font-bold md:text-5xl mb-6">{t("Contact.title")}</h2>
         <p className="text-center max-w-[750px] text-lg mb-8 sm:text-xl">
-          Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-          cillum sint consectetur cupidatat.
+          {t("Contact.description")}
         </p>
-        <ContactForm />
+        <NextIntlClientProvider messages={pick(messages, "Index.Contact.form")}>
+          <ContactForm />
+        </NextIntlClientProvider>
         <Footer />
       </section>
     </>

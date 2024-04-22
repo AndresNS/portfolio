@@ -1,0 +1,59 @@
+{
+  "Languages": { "name": "Idioma" },
+  "Header": {
+    "about": "Acerca de mí",
+    "stack": "Tecnologías",
+    "resume": "Currículum",
+    "projects": "Proyectos",
+    "contact": "Hablemos!"
+  },
+  "Index": {
+    "Hero": {
+      "role": "Desarrollador Full-Stack",
+      "description": "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat."
+    },
+    "Stack": {
+      "title": "Mi Stack",
+      "description": "lorem"
+    },
+    "Experience": {
+      "title": "Experiencia"
+    },
+    "Projects": {
+      "title": "Proyectos",
+      "description": "lorem",
+      "list": {
+        "0": {
+          "type": "Sitio Web",
+          "title": "JSON Stringifier",
+          "description": "Conversor de JSON a String"
+        },
+        "1": {
+          "type": "App Móvil",
+          "title": "TCG Life Counter",
+          "description": "Contador de vidas"
+        }
+      }
+    },
+    "Contact": {
+      "title": "Contacto",
+      "description": "lorem",
+      "form": {
+        "name": { "label": "Nombre", "placeholder": "Tu nombre" },
+        "email": {
+          "label": "Correo Electrónico",
+          "placeholder": "ejemplo@email.com"
+        },
+        "message": {
+          "label": "Mensaje",
+          "placeholder": "Cuéntame qué tienes en mente"
+        },
+        "submitButton": { "default": "Enviar", "pending": "Enviando..." },
+        "toast": {
+          "title": "¡Mensaje enviado!",
+          "description": "¡Gracias por contactarme! Tu mensaje se ha enviado exitosamente. Te responderé tan pronto como sea posible."
+        }
+      }
+    }
+  }
+}

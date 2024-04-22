@@ -27,7 +27,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <CardDescription>{project.description}</CardDescription>
         </CardHeader>
         <CardContent>
-          <p>Card Content</p>
+          <p>image</p>
         </CardContent>
         <CardFooter>
           <ul className="flex gap-2" aria-label="Technologies used">
