@@ -10,34 +10,39 @@
   "Index": {
     "Hero": {
       "role": "Full-Stack Developer",
-      "description": "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat."
+      "description": "Coding enthusiast, problem solver, perpetual learner, seeking opportunities to apply and expand my skills. Also, enjoy video games and TCGs."
     },
     "Stack": {
-      "title": "My Stack",
-      "description": "lorem"
+      "title": "My Tech Stack",
+      "description": "From essential languages to powerful frameworks and cloud services, my toolkit contains a wide range of tools for crafting solutions to meet every need. Let's build the digital experience you are looking for."
     },
     "Experience": {
       "title": "Experience"
     },
     "Projects": {
       "title": "Projects",
-      "description": "lorem",
+      "description": "Here is a sample of what I have built, ranging from professional endeavors to fun passion projects. Each project showcases my learning journey and reflects what I enjoy.",
       "list": {
         "0": {
           "type": "Website",
           "title": "JSON Stringifier",
-          "description": "JSON String stringifier"
+          "description": "A simple project I made for fun to convert JSON data to a String and back."
         },
         "1": {
           "type": "Mobile App",
           "title": "TCG Life Counter",
-          "description": "Life counter app"
+          "description": "A mobile app to track your life total in trading card games like Magic: The Gathering, Flesh and Blood, etc."
+        },
+        "2": {
+          "type": "Anything",
+          "title": "Your next idea",
+          "description": "This could be one of your projects. Let's make it a reality!"
         }
       }
     },
     "Contact": {
       "title": "Contact",
-      "description": "lorem",
+      "description": "Do you have a project in mind? Whether it's for a collaboration, inquiry, or just to say hi, feel free to leave me a message.",
       "form": {
         "name": { "label": "Name", "placeholder": "Your name" },
         "email": {
@@ -54,6 +59,36 @@
           "description": "Thanks for reaching out! Your message has been successfully sent. I'll get back to you as soon as possible."
         }
       }
+    }
+  },
+  "Experiences": {
+    "1": {
+      "startDate": "July 2023",
+      "endDate": "October 2023",
+      "role": "Software Development Consultant",
+      "company": "Tester app",
+      "description": "I led and advised a collaborative project with an external company, participating in the definition of its priorities and requirements. I provided technical solutions and recommendations based on my experience with technologies such as React, AWS, and the Serverless Framework. I collaborated in decision-making with both teams, contributing to planning, reviewing key milestones, and making necessary adjustments to achieve efficient development aligned with the project's objectives."
+    },
+    "2": {
+      "startDate": "February 2022",
+      "endDate": "June 2023",
+      "role": "Technical Lead and Full-Stack Developer",
+      "company": "Tester app",
+      "description": "As the leader of a development team at Tester App, I directed the creation and delivery of technological solutions, focusing on full-stack architecture and development. My responsibilities included designing the architecture and developing applications with React and Next.js, creating databases in DynamoDB, automating development processes through CI/CD workflows with CodePipeline and CodeBuild, as well as overseeing and training the team with a human-centric approach to foster professional growth. I established effective communication with business counterparts and product managers in both internal and external projects."
+    },
+    "3": {
+      "startDate": "February 2021",
+      "endDate": "September 2021",
+      "role": "Full-Stack Developer",
+      "company": "Tester app",
+      "description": "As a full-stack developer at Tester, I focused on architecture and development, using technologies such as React and Next.js on the front-end, and AWS with the Serverless Framework on the back-end. My responsibilities included designing and developing applications with React, Next.js, and AWS services, collaborating on the design and modeling of databases in DynamoDB, and implementing development workflows through CI/CD automation using tools like CodePipeline and CodeBuild."
+    },
+    "4": {
+      "startDate": "September 2020",
+      "endDate": "January 2021",
+      "role": "Professional Internship as a Developer",
+      "company": "CORPA Market Studies",
+      "description": "During my professional internship as a Developer, I specialized in designing and developing models and access patterns in NoSQL databases, with a focus on DynamoDB. Additionally, I contributed to the design and development of microservices in AWS cloud environments using the Serverless Framework. I also automated CI/CD processes in AWS environments and participated in the design and documentation of APIs to facilitate effective communication within the development team."
     }
   }
 }
