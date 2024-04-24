@@ -10,10 +10,12 @@ import { useTranslations } from "next-intl";
 
 export default function Projects() {
   const t = useTranslations("Index.Projects.list");
-  const keys = ["0", "1"] as const;
+  const keys = ["0", "1", "2", "3"] as const;
   const technologies = {
     "0": ["Next.js", "Typescript", "Tailwind CSS", "AWS Amplify"],
     "1": ["React Native", "Expo"],
+    "2": ["Next.js", "Shadcn/ui", "Tailwind CSS", "Amazon SES"],
+    "3": [],
   };
 
   return (
