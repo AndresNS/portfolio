@@ -21,7 +21,7 @@
     },
     "Projects": {
       "title": "Proyectos",
-      "description": "Aquí hay una muestra de lo que he creado, incluyendo proyectos tanto profesionales como personales hechos por amor al arte. Cada trabajo muestra mi trayectoria de aprendizaje y refleja mis intereses.",
+      "description": "Aquí hay una muestra de lo que he creado, incluyendo proyectos tanto profesionales como personales. Cada trabajo muestra mi trayectoria de aprendizaje y refleja mis intereses.",
       "list": {
         "0": {
           "type": "Sitio Web",
@@ -91,7 +91,7 @@
     "4": {
       "startDate": "Sep 2020",
       "endDate": "Ene 2021",
-      "role": "Practica Profesionala Desarrollador",
+      "role": "Practica Profesional Desarrollador",
       "company": "CORPA Estudios de Mercado",
       "description": "Durante mi práctica profesional como Desarrollador, me especialicé en el diseño y desarrollo de modelos y patrones de acceso en bases de datos NoSQL, centrándome en DynamoDB. Además, contribuí al diseño y desarrollo de microservicios en entornos cloud de AWS mediante el uso del Serverless Framework. También automatizé procesos CI/CD en entornos de AWS y participé en el diseño y documentación de APIs para facilitar la comunicación efectiva dentro del equipo de desarrollo."
     }
