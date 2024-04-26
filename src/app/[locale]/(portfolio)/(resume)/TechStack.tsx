@@ -27,7 +27,12 @@ export default function TechStack() {
   return (
     <>
       {technologies.map((technology, index) => (
-        <TechIcon name={technology.name} label={technology.label} key={index} />
+        <TechIcon
+          name={technology.name}
+          label={technology.label}
+          animationDelay={index * 0.04}
+          key={index}
+        />
       ))}
     </>
   );

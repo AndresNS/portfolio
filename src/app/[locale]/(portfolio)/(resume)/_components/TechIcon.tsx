@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { IconType } from "react-icons";
 import {
   SiHtml5,
@@ -41,15 +44,26 @@ type StackIconProps = {
   name: string;
   label: string;
   level?: number;
+  animationDelay: number;
 };
 
-export default function StackIcon({ name, label }: StackIconProps) {
+export default function StackIcon({
+  name,
+  label,
+  animationDelay,
+}: StackIconProps) {
   const Icon = icons[name];
   // on hover show level bars and lower opacity of the rest
   return (
-    <div className="flex flex-col items-center gap-2">
+    <motion.div
+      className="flex flex-col items-center gap-2"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ delay: animationDelay }}
+    >
       <Icon className="text-5xl" />
       {label}
-    </div>
+    </motion.div>
   );
 }
