@@ -46,7 +46,7 @@ export default function Portfolio() {
       {/* Projects */}
       <section
         id="projects"
-        className="min-h-screen flex flex-col gap-12 items-center justify-center"
+        className="min-h-screen flex flex-col gap-12 items-center justify-center pt-28"
       >
         <h2 className="font-bold md:text-5xl mb-6">{t("Projects.title")}</h2>
         <p className="text-center max-w-[750px] text-lg mb-20 sm:text-xl">
