@@ -74,12 +74,12 @@ const config = {
         floating: {
           "0%": {
             transform: "translateY(0)",
-            filter: "drop-shadow(0px 0px rgba(255, 255, 255, 1))",
+            filter: "drop-shadow(0px 0px hsl(var(--foreground)))",
           },
           "30%": { transform: "translateY(10px)" },
           "100%": {
             transform: "translateY(0)",
-            filter: "drop-shadow(0px 20px rgba(255, 255, 255, 0))",
+            filter: "drop-shadow(0px 20px hsl(var(--foreground)/0))",
           },
         },
       },
