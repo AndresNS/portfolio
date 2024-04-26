@@ -16,8 +16,8 @@ export default function Hero() {
         {t("description")}
       </p>
 
-      <Link className="absolute bottom-16 flex items-center p-2" href="/#stack">
-        <IoIosArrowDown className="text-3xl" />
+      <Link className="absolute bottom-16 flex items-center p-4" href="/#stack">
+        <IoIosArrowDown className="text-3xl animate-floating" />
       </Link>
     </section>
   );
