@@ -1,6 +1,8 @@
 import ProjectCard from "./_components/ProjectCard";
 import { useTranslations } from "next-intl";
 import jsonStringifierThumbnail from "/public/images/projects/json-stringifier/json-stringifier_thumbnail.jpg";
+import lifeCounterThumbnail from "/public/images/projects/life-counter/life-counter_thumbnail.jpg";
+import yourIdeaThumbnail from "/public/images/projects/your-idea/your-idea_thumbnail.jpg";
 
 export default function Projects() {
   const t = useTranslations("Index.Projects.list");
@@ -12,13 +14,13 @@ export default function Projects() {
     },
     "1": {
       technologies: ["React Native", "Expo"],
-      thumbnail: jsonStringifierThumbnail,
+      thumbnail: lifeCounterThumbnail,
     },
     "2": {
       technologies: ["Next.js", "Shadcn/ui", "Tailwind CSS", "Amazon SES"],
       thumbnail: jsonStringifierThumbnail,
     },
-    "3": { technologies: [], thumbnail: null },
+    "3": { technologies: [], thumbnail: yourIdeaThumbnail },
   };
 
   return (
