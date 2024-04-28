@@ -30,6 +30,7 @@ export default function TechStack() {
         <TechIcon
           name={technology.name}
           label={technology.label}
+          level={technology.level}
           animationDelay={index * 0.04}
           key={index}
         />

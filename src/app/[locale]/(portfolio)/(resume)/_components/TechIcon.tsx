@@ -43,27 +43,42 @@ const icons: Record<string, IconType> = {
 type StackIconProps = {
   name: string;
   label: string;
-  level?: number;
+  level: number;
   animationDelay: number;
 };
 
 export default function StackIcon({
   name,
   label,
+  level,
   animationDelay,
 }: StackIconProps) {
   const Icon = icons[name];
-  // on hover show level bars and lower opacity of the rest
+
+  const renderProgressBar = (level: number) => {
+    return Array.from({ length: 5 }, (_, index) => (
+      <div
+        key={index}
+        className={`w-2 h-2 ${index < level ? "bg-muted-foreground" : "bg-muted"}`}
+      ></div>
+    ));
+  };
+
   return (
     <motion.div
-      className="flex flex-col items-center gap-2"
+      className="flex flex-col group min-w-24 items-center"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ delay: animationDelay }}
     >
-      <Icon className="text-5xl" />
-      {label}
+      <Icon className="text-5xl mb-8" />
+      <div className="relative w-full flex justify-center items-center">
+        <p className="absolute group-hover:opacity-0 transition-[opacity] ease-in duration-400">{label}</p>
+        <div className="absolute opacity-0 group-hover:opacity-100 flex justify-center gap-1 transition-[opacity] ease-in duration-400">
+          {renderProgressBar(level)}
+        </div>
+      </div>
     </motion.div>
   );
 }
