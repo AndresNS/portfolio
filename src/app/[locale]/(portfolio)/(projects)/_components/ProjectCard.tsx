@@ -26,7 +26,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           />
         )}
         <div className="absolute top-0 bottom-0 left-0 right-0 bg-background/80 opacity-0 hover:opacity-100 transition-opacity duration-500 p-6 flex flex-col">
-          <h3 className="text-center font-bold text-2xl mb-4">
+          <h3 className="text-center font-bold text-2xl mb-6">
             {project.title}
           </h3>
           <div className="flex-1">
