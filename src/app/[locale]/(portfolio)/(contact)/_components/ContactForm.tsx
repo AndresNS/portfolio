@@ -43,7 +43,7 @@ export default function ContactForm() {
         description: t("toast.description"),
       });
     }
-  }, [state, toast]);
+  }, [state, toast, t]);
 
   return (
     <form action={formAction} ref={ref} className="space-y-8 w-full max-w-xl">

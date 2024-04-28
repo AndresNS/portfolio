@@ -1,5 +1,8 @@
+"use client";
+
 import Image, { StaticImageData } from "next/image";
 import { Badge } from "@/components/ui/badge";
+import { motion } from "framer-motion";
 
 export interface ProjectData {
   type: string;
@@ -13,10 +16,19 @@ type ProjectCardProps = {
   project: ProjectData;
 };
 
+const animationVariants = {
+  hidden: { opacity: 0 },
+  reveal: { opacity: 1 },
+};
+
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <>
-      <div className="relative flex h-auto">
+      <motion.div
+        transition={{ duration: 0.5 }}
+        variants={animationVariants}
+        className="relative flex h-auto"
+      >
         {project.thumbnail && (
           <Image
             className="w-full"
@@ -43,7 +55,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             ))}
           </ul>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

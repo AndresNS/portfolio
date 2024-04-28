@@ -1,8 +1,11 @@
+"use client";
+
 import ProjectCard from "./_components/ProjectCard";
 import { useTranslations } from "next-intl";
 import jsonStringifierThumbnail from "/public/images/projects/json-stringifier/json-stringifier_thumbnail.jpg";
 import lifeCounterThumbnail from "/public/images/projects/life-counter/life-counter_thumbnail.jpg";
 import yourIdeaThumbnail from "/public/images/projects/your-idea/your-idea_thumbnail.jpg";
+import { motion } from "framer-motion";
 
 export default function Projects() {
   const t = useTranslations("Index.Projects.list");
@@ -25,7 +28,13 @@ export default function Projects() {
 
   return (
     <>
-      <div className="grid gap-4 grid-cols-3">
+      <motion.div
+        initial="hidden"
+        whileInView="reveal"
+        viewport={{ once: true }}
+        transition={{ staggerChildren: 0.08 }}
+        className="grid gap-4 grid-cols-3"
+      >
         {keys.map((key) => (
           <ProjectCard
             key={key}
@@ -38,7 +47,7 @@ export default function Projects() {
             }}
           />
         ))}
-      </div>
+      </motion.div>
     </>
   );
 }

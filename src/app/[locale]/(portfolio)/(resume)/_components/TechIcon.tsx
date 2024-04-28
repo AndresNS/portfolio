@@ -44,15 +44,14 @@ type StackIconProps = {
   name: string;
   label: string;
   level: number;
-  animationDelay: number;
 };
 
-export default function StackIcon({
-  name,
-  label,
-  level,
-  animationDelay,
-}: StackIconProps) {
+const animationVariants = {
+  hidden: { opacity: 0 },
+  reveal: { opacity: 1 },
+};
+
+export default function StackIcon({ name, label, level }: StackIconProps) {
   const Icon = icons[name];
 
   const renderProgressBar = (level: number) => {
@@ -67,14 +66,14 @@ export default function StackIcon({
   return (
     <motion.div
       className="flex flex-col group min-w-24 items-center"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ delay: animationDelay }}
+      variants={animationVariants}
+      transition={{ duration: 0.5 }}
     >
       <Icon className="text-5xl mb-8" />
       <div className="relative w-full flex justify-center items-center">
-        <p className="absolute group-hover:opacity-0 transition-[opacity] ease-in duration-400">{label}</p>
+        <p className="absolute group-hover:opacity-0 transition-[opacity] ease-in duration-400">
+          {label}
+        </p>
         <div className="absolute opacity-0 group-hover:opacity-100 flex justify-center gap-1 transition-[opacity] ease-in duration-400">
           {renderProgressBar(level)}
         </div>

@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import TechIcon from "./_components/TechIcon";
 
 interface Technology {
@@ -25,16 +28,21 @@ const technologies: Technology[] = [
 
 export default function TechStack() {
   return (
-    <>
+    <motion.div
+      initial="hidden"
+      whileInView="reveal"
+      viewport={{ once: true }}
+      transition={{ staggerChildren: 0.04 }}
+      className="flex gap-12 mx-auto max-w-[980px] flex-wrap justify-center"
+    >
       {technologies.map((technology, index) => (
         <TechIcon
           name={technology.name}
           label={technology.label}
           level={technology.level}
-          animationDelay={index * 0.04}
           key={index}
         />
       ))}
-    </>
+    </motion.div>
   );
 }

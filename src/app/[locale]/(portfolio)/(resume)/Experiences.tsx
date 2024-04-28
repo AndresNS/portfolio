@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import { Experience, ExperienceData } from "./_components/Experience";
+import { Experience } from "./_components/Experience";
 
 const technologies = {
   "1": [

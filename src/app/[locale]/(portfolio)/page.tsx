@@ -29,9 +29,7 @@ export default function Portfolio() {
         <p className="text-center max-w-[750px] text-lg mb-20 sm:text-xl">
           {t("Stack.description")}
         </p>
-        <div className="flex gap-12 mx-auto max-w-[980px] flex-wrap justify-center">
-          <TechStack />
-        </div>
+        <TechStack />
       </section>
 
       {/* Resume */}
@@ -54,7 +52,9 @@ export default function Portfolio() {
         </p>
 
         <div className="container mx-auto">
-          <Projects />
+          <NextIntlClientProvider messages={pick(messages, "Index.Projects")}>
+            <Projects />
+          </NextIntlClientProvider>
         </div>
       </section>
 
