@@ -10,6 +10,7 @@ import {
   useTranslations,
 } from "next-intl";
 import pick from "lodash/pick";
+import Background from "./_components/Background";
 
 export default function Portfolio() {
   const t = useTranslations("Index");
@@ -17,6 +18,7 @@ export default function Portfolio() {
 
   return (
     <>
+      <Background />
       {/* Hero */}
       <Hero />
 

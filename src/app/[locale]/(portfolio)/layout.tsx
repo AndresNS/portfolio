@@ -7,7 +7,7 @@ export default function PortfolioLayout({
 }>) {
   return (
     <>
-      <div className="">
+      <div className="relative">
         <Header />
         <div>{children}</div>
       </div>
