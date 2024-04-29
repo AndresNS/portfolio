@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import jsonStringifierThumbnail from "/public/images/projects/json-stringifier/json-stringifier_thumbnail.jpg";
 import lifeCounterThumbnail from "/public/images/projects/life-counter/life-counter_thumbnail.jpg";
 import yourIdeaThumbnail from "/public/images/projects/your-idea/your-idea_thumbnail.jpg";
+import portfolioThumbnail from "/public/images/projects/portfolio/portfolio_thumbnail.jpg";
 import { motion } from "framer-motion";
 
 export default function Projects() {
@@ -21,7 +22,7 @@ export default function Projects() {
     },
     "2": {
       technologies: ["Next.js", "Shadcn/ui", "Tailwind CSS", "Amazon SES"],
-      thumbnail: jsonStringifierThumbnail,
+      thumbnail: portfolioThumbnail,
     },
     "3": { technologies: [], thumbnail: yourIdeaThumbnail },
   };
