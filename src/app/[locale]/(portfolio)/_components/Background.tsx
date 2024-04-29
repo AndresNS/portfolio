@@ -26,7 +26,7 @@ export default function Background() {
       maxCells = 30 - Math.floor(distanceToCenter / 5);
     }
 
-    return Math.floor(Math.random() * (maxCells - minCells) + 1) + minCells;
+    return Math.floor(0.5 * (maxCells - minCells) + 1) + minCells;
   };
 
   const getCellColor = () => {
@@ -49,7 +49,7 @@ export default function Background() {
   return (
     <motion.div
       style={{ y }}
-      className="blur-lg fixed top-0 left-0 bottom-0 z-[-1] w-full flex"
+      className="blur-md fixed top-0 left-0 bottom-0 z-[-1] w-full flex"
     >
       {cols.map((_, colIndex) => {
         const rows = Array.from(
