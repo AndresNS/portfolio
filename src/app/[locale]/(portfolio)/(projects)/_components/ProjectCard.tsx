@@ -3,6 +3,9 @@
 import Image, { StaticImageData } from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { SiGithub } from "react-icons/si";
+import { IoRocketSharp } from "react-icons/io5";
 
 export interface ProjectData {
   type: string;
@@ -10,6 +13,8 @@ export interface ProjectData {
   description: string;
   technologies: string[];
   thumbnail: StaticImageData | null;
+  repository: string | null;
+  deployment: string | null;
 }
 
 type ProjectCardProps = {
@@ -41,8 +46,20 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <h3 className="text-center font-bold text-2xl mb-6">
             {project.title}
           </h3>
-          <div className="flex-1">
-            <p className="text-center">{project.description}</p>
+          <div className="flex-1 flex flex-col">
+            <p className="text-center mb-8">{project.description}</p>
+            <div className="flex justify-center items-center text-3xl gap-4">
+              {project.repository && (
+                <Link href={project.repository} target="_blank">
+                  <SiGithub />
+                </Link>
+              )}
+              {project.deployment && (
+                <Link href={project.deployment} target="_blank">
+                  <IoRocketSharp />
+                </Link>
+              )}
+            </div>
           </div>
           <ul
             className="flex flex-wrap gap-2 justify-center"

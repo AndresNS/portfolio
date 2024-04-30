@@ -15,16 +15,27 @@ export default function Projects() {
     "0": {
       technologies: ["Next.js", "Typescript", "Tailwind CSS", "AWS Amplify"],
       thumbnail: jsonStringifierThumbnail,
+      repository: "https://github.com/AndresNS/simple-json-stringifier",
+      deployment: "https://main.d3vrcznmxcfs9x.amplifyapp.com",
     },
     "1": {
       technologies: ["React Native", "Expo"],
       thumbnail: lifeCounterThumbnail,
+      repository: "https://github.com/AndresNS/life-counter",
+      deployment: null,
     },
     "2": {
       technologies: ["Next.js", "Shadcn/ui", "Tailwind CSS", "Amazon SES"],
       thumbnail: portfolioThumbnail,
+      repository: "https://github.com/AndresNS/portfolio",
+      deployment: null,
     },
-    "3": { technologies: [], thumbnail: yourIdeaThumbnail },
+    "3": {
+      technologies: [],
+      thumbnail: yourIdeaThumbnail,
+      repository: null,
+      deployment: null,
+    },
   };
 
   return (
@@ -45,6 +56,8 @@ export default function Projects() {
               description: t(`${key}.description`),
               technologies: projectsData[key].technologies,
               thumbnail: projectsData[key].thumbnail,
+              repository: projectsData[key].repository,
+              deployment: projectsData[key].deployment,
             }}
           />
         ))}
