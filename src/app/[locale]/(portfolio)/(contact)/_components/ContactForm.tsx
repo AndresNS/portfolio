@@ -48,7 +48,9 @@ export default function ContactForm() {
   return (
     <form action={formAction} ref={ref} className="space-y-8 w-full max-w-xl">
       <div>
-        <Label htmlFor="name">{t("name.label")}</Label>
+        <Label htmlFor="name" className="block mb-4">
+          {t("name.label")}
+        </Label>
         <Input
           type="text"
           id="name"
@@ -61,7 +63,9 @@ export default function ContactForm() {
         )}
       </div>
       <div>
-        <Label htmlFor="email">{t("email.label")}</Label>
+        <Label htmlFor="email" className="block mb-4">
+          {t("email.label")}
+        </Label>
         <Input
           type="email"
           id="email"
@@ -74,7 +78,9 @@ export default function ContactForm() {
         )}
       </div>
       <div>
-        <Label htmlFor="message">{t("message.label")}</Label>
+        <Label htmlFor="message" className="block mb-4">
+          {t("message.label")}
+        </Label>
         <Textarea
           id="message"
           name="message"
@@ -86,10 +92,11 @@ export default function ContactForm() {
           <div className="text-destructive">{state.error.message}</div>
         )}
       </div>
+      <div className="flex justify-end">
       <SubmitButton
         text={t("submitButton.default")}
         pendingText={t("submitButton.pending")}
-      />
+      /></div>
     </form>
   );
 }

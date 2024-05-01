@@ -27,7 +27,7 @@ export default function Portfolio() {
         id="stack"
         className="min-h-screen flex flex-col items-center justify-center"
       >
-        <h2 className="font-bold md:text-5xl mb-6">{t("Stack.title")}</h2>
+        <h2 className="font-bold md:text-5xl mb-12">{t("Stack.title")}</h2>
         <p className="text-center max-w-[750px] text-lg mb-20 sm:text-xl">
           {t("Stack.description")}
         </p>
@@ -37,18 +37,18 @@ export default function Portfolio() {
       {/* Resume */}
       <section
         id="resume"
-        className="min-h-screen flex flex-col gap-12 items-center justify-center pt-28"
+        className="min-h-screen flex flex-col items-center justify-center py-28"
       >
-        <h2 className="font-bold md:text-5xl mb-6">{t("Experience.title")}</h2>
+        <h2 className="font-bold md:text-5xl mb-20">{t("Experience.title")}</h2>
         <Experiences />
       </section>
 
       {/* Projects */}
       <section
         id="projects"
-        className="min-h-screen flex flex-col gap-12 items-center justify-center pt-28"
+        className="min-h-screen flex flex-col items-center justify-center py-28"
       >
-        <h2 className="font-bold md:text-5xl mb-6">{t("Projects.title")}</h2>
+        <h2 className="font-bold md:text-5xl mb-12">{t("Projects.title")}</h2>
         <p className="text-center max-w-[750px] text-lg mb-20 sm:text-xl">
           {t("Projects.description")}
         </p>
@@ -63,10 +63,10 @@ export default function Portfolio() {
       {/* Contact */}
       <section
         id="contact"
-        className="container mx-auto flex flex-col gap-12 items-center pt-28"
+        className="container mx-auto flex flex-col items-center pt-28"
       >
-        <h2 className="font-bold md:text-5xl mb-6">{t("Contact.title")}</h2>
-        <p className="text-center max-w-[750px] text-lg mb-8 sm:text-xl">
+        <h2 className="font-bold md:text-5xl mb-12">{t("Contact.title")}</h2>
+        <p className="text-center max-w-[750px] text-lg mb-12 sm:text-xl">
           {t("Contact.description")}
         </p>
         <NextIntlClientProvider messages={pick(messages, "Index.Contact.form")}>

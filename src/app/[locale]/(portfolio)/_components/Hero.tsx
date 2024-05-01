@@ -11,7 +11,7 @@ export default function Hero() {
       className="relative min-h-screen h-screen mx-auto flex max-w-[980px] flex-col items-center justify-center gap-2 pb-16"
     >
       <h1 className="text-center text-3xl md:text-4xl">Andrés Navarro S.</h1>
-      <h2 className="text-center font-bold md:text-6xl">{t("role")}</h2>
+      <h2 className="text-center font-bold mb-4 md:text-6xl">{t("role")}</h2>
       <p className="max-w-[750px] text-center text-lg text-muted-foreground sm:text-xl">
         {t("description")}
       </p>

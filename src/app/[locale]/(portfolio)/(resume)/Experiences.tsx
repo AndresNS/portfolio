@@ -37,7 +37,7 @@ export default function Experiences() {
   const keys = ["1", "2", "3", "4"] as const;
 
   return (
-    <>
+    <div className="flex flex-col gap-12">
       {keys.map((key) => (
         <Experience
           experience={{
@@ -51,6 +51,6 @@ export default function Experiences() {
           key={key}
         />
       ))}
-    </>
+    </div>
   );
 }
