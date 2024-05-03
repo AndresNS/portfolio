@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import Header from "./_components/Header";
 
 export default function PortfolioLayout({
@@ -5,10 +6,18 @@ export default function PortfolioLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const t = useTranslations("Header");
   return (
     <>
       <div className="relative">
-        <Header />
+        <Header
+          items={[
+            { href: "/#about", text: t("about") },
+            { href: "/#resume", text: t("resume") },
+            { href: "/#projects", text: t("projects") },
+            { href: "/#contact", text: t("contact") },
+          ]}
+        />
         <div>{children}</div>
       </div>
     </>
