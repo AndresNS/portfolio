@@ -11,6 +11,7 @@ import {
 } from "next-intl";
 import pick from "lodash/pick";
 import Background from "./_components/Background";
+import AnimatedText from "./_components/AnimatedText";
 
 export default function Portfolio() {
   const t = useTranslations("Index");
@@ -27,7 +28,11 @@ export default function Portfolio() {
         id="stack"
         className="min-h-screen flex flex-col items-center justify-center"
       >
-        <h2 className="font-bold md:text-5xl mb-12">{t("Stack.title")}</h2>
+        <AnimatedText
+          text={t("Stack.title")}
+          component="h2"
+          className="font-bold md:text-5xl mb-12"
+        />
         <p className="text-center max-w-[750px] text-lg mb-20 sm:text-xl">
           {t("Stack.description")}
         </p>
@@ -39,7 +44,11 @@ export default function Portfolio() {
         id="resume"
         className="min-h-screen flex flex-col items-center justify-center py-28"
       >
-        <h2 className="font-bold md:text-5xl mb-20">{t("Experience.title")}</h2>
+        <AnimatedText
+          text={t("Experience.title")}
+          component="h2"
+          className="font-bold md:text-5xl mb-20"
+        />
         <Experiences />
       </section>
 
@@ -48,7 +57,11 @@ export default function Portfolio() {
         id="projects"
         className="min-h-screen flex flex-col items-center justify-center py-28"
       >
-        <h2 className="font-bold md:text-5xl mb-12">{t("Projects.title")}</h2>
+        <AnimatedText
+          text={t("Projects.title")}
+          component="h2"
+          className="font-bold md:text-5xl mb-12"
+        />
         <p className="text-center max-w-[750px] text-lg mb-20 sm:text-xl">
           {t("Projects.description")}
         </p>
@@ -65,7 +78,11 @@ export default function Portfolio() {
         id="contact"
         className="container mx-auto flex flex-col items-center pt-28"
       >
-        <h2 className="font-bold md:text-5xl mb-12">{t("Contact.title")}</h2>
+        <AnimatedText
+          text={t("Contact.title")}
+          component="h2"
+          className="font-bold md:text-5xl mb-12"
+        />
         <p className="text-center max-w-[750px] text-lg mb-12 sm:text-xl">
           {t("Contact.description")}
         </p>

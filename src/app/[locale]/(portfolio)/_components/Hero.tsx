@@ -12,7 +12,7 @@ export default function Hero() {
       className="relative min-h-screen h-screen mx-auto flex max-w-[980px] flex-col items-center justify-center gap-2 pb-16"
     >
       <h1 className="text-center text-4xl">Andrés Navarro S.</h1>
-      <AnimatedText text={t("role")} />
+      <AnimatedText text={t("role")} component="h2" className="text-6xl font-bold"/>
       <p className="max-w-[750px] text-center text-lg text-muted-foreground sm:text-xl">
         {t("description")}
       </p>

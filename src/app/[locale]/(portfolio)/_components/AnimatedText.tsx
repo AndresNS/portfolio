@@ -1,14 +1,21 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import { useState } from "react";
 
 interface AnimatedTextProps {
   text: string;
+  component: keyof JSX.IntrinsicElements;
+  className?: string;
 }
 
 const letters: string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-const AnimatedText: React.FC<AnimatedTextProps> = ({ text }) => {
+const AnimatedText: React.FC<AnimatedTextProps> = ({
+  text,
+  component: Component,
+  className,
+}) => {
   const [headerText, setHeaderText] = useState(text);
 
   const runAnimation = () => {
@@ -35,13 +42,13 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ text }) => {
   const handleMouseOver = () => runAnimation();
 
   return (
-    <h1
-      className="text-6xl font-mono font-bold uppercase"
+    <Component
+      className={cn("font-mono uppercase", className)}
       onMouseOver={handleMouseOver}
       data-value={text}
     >
       {headerText}
-    </h1>
+    </Component>
   );
 };
 
