@@ -1,5 +1,9 @@
 {
   "Languages": { "name": "Language" },
+  "NotFoundPage": {
+    "text": "Page not found",
+    "backButton": "Go to homepage"
+  },
   "Header": {
     "about": "About",
     "stack": "Stack",

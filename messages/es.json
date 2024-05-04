@@ -1,5 +1,9 @@
 {
   "Languages": { "name": "Idioma" },
+  "NotFoundPage": {
+    "text": "Página no encontrada",
+    "backButton": "Volver al inicio"
+  },
   "Header": {
     "about": "Acerca de mí",
     "stack": "Tecnologías",
