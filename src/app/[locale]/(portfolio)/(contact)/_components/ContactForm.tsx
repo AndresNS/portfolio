@@ -6,9 +6,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { sendContactEmail } from "../_actions/contact";
 import { Label } from "@/components/ui/label";
 import { useFormState, useFormStatus } from "react-dom";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import { useTranslations } from "next-intl";
+import ReCAPTCHA from "react-google-recaptcha";
 
 function SubmitButton({
   text,
@@ -28,6 +29,7 @@ function SubmitButton({
 
 export default function ContactForm() {
   const { toast } = useToast();
+  const [captcha, setCaptcha] = useState<string | null>();
   const [state, formAction] = useFormState(sendContactEmail, {
     sucess: false,
     error: { name: [""], email: [""], message: [""] },
@@ -45,8 +47,20 @@ export default function ContactForm() {
     }
   }, [state, toast, t]);
 
+  const handleSubmit = (formData: FormData) => {
+    if (!captcha)
+      return toast({
+        title: "Uh-oh! Invalid captcha",
+        description:
+          "I'm sorry you have to find out this way, but I think you might be a robot.",
+        variant: "destructive",
+      });
+
+    formAction(formData);
+  };
+
   return (
-    <form action={formAction} ref={ref} className="space-y-8 w-full max-w-xl">
+    <form action={handleSubmit} ref={ref} className="space-y-8 w-full max-w-xl">
       <div>
         <Label htmlFor="name" className="block mb-4">
           {t("name.label")}
@@ -92,11 +106,18 @@ export default function ContactForm() {
           <div className="text-destructive">{state.error.message}</div>
         )}
       </div>
-      <div className="flex justify-end">
-      <SubmitButton
-        text={t("submitButton.default")}
-        pendingText={t("submitButton.pending")}
-      /></div>
+      <div>
+        <ReCAPTCHA
+          sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+          onChange={setCaptcha}
+        />
+      </div>
+      <div className="flex justify-center">
+        <SubmitButton
+          text={t("submitButton.default")}
+          pendingText={t("submitButton.pending")}
+        />
+      </div>
     </form>
   );
 }

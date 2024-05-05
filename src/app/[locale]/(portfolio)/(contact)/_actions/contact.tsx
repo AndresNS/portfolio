@@ -48,6 +48,8 @@ export async function sendContactEmail(prevState: unknown, formData: FormData) {
     },
   };
 
+  console.log("sending email");
+
   ses.sendEmail(params);
 
   return { sucess: true, error: null };
