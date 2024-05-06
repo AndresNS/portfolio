@@ -24,8 +24,8 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
     const intervalID: NodeJS.Timeout = setInterval(() => {
       const newText = headerText
         .split("")
-        .map((_, index) => {
-          if (index < iteration) {
+        .map((char, index) => {
+          if (index < iteration || char === " ") {
             return text[index];
           }
           return letters[Math.floor(Math.random() * 26)];
