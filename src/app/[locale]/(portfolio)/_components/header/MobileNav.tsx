@@ -14,7 +14,7 @@ export default function MobileNav({ items }: HeaderProps) {
     <>
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
-          <Button variant="ghost" size="icon" className="md:hidden">
+          <Button variant="ghost" size="icon" className="lg:hidden">
             <MenuIcon />
           </Button>
         </SheetTrigger>

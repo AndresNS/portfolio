@@ -21,7 +21,7 @@ export default function Header({ items }: HeaderProps) {
           <Link href="/#about" className="py-4">
             Andrés<span className="font-bold">NS</span>
           </Link>
-          <div className="flex md:flex-row-reverse items-center gap-4 ">
+          <div className="flex lg:flex-row-reverse items-center gap-4 ">
             <ModeToggle />
             <MainNav items={items} />
             <MobileNav items={items} />

@@ -4,7 +4,7 @@ import { HeaderProps } from "./types";
 
 export default function MainNav({ items }: HeaderProps) {
   return (
-    <div className="hidden md:flex">
+    <div className="hidden lg:flex">
       <Nav>
         {items.map((item, index) => (
           <NavLink key={index} href={item.href}>
