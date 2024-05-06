@@ -32,7 +32,7 @@ export async function sendContactEmail(prevState: unknown, formData: FormData) {
   const params = {
     Source: process.env.SENDER_EMAIL,
     Destination: {
-      ToAddresses: [process.env.SENDER_EMAIL as string],
+      ToAddresses: [process.env.DESTINATION_EMAIL as string],
     },
     Message: {
       Body: {
