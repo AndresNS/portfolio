@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import Header from "./_components/Header";
+import Header from "./_components/header/Header";
 
 export default function PortfolioLayout({
   children,

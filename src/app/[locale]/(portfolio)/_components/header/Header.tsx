@@ -1,18 +1,11 @@
 "use client";
 
-import { ModeToggle } from "@/components/ModeToggle";
-import { Nav, NavLink } from "@/components/Nav";
 import { motion, useScroll } from "framer-motion";
 import Link from "next/link";
-
-interface NavItem {
-  href: string;
-  text: string;
-}
-
-type HeaderProps = {
-  items: NavItem[];
-};
+import MainNav from "./MainNav";
+import MobileNav from "./MobileNav";
+import { HeaderProps } from "./types";
+import { ModeToggle } from "@/components/ModeToggle";
 
 export default function Header({ items }: HeaderProps) {
   const { scrollYProgress } = useScroll();
@@ -25,17 +18,14 @@ export default function Header({ items }: HeaderProps) {
           style={{ scaleX: scrollYProgress }}
         ></motion.div>
         <div className="container mx-auto flex justify-between items-center">
-          <Link href="/#about">
+          <Link href="/#about" className="py-4">
             Andrés<span className="font-bold">NS</span>
           </Link>
-          <Nav>
-            {items.map((item, index) => (
-              <NavLink key={index} href={item.href}>
-                {item.text}
-              </NavLink>
-            ))}
+          <div className="flex md:flex-row-reverse items-center gap-4 ">
             <ModeToggle />
-          </Nav>
+            <MainNav items={items} />
+            <MobileNav items={items} />
+          </div>
         </div>
       </header>
     </>
