@@ -26,14 +26,14 @@ export default function Portfolio() {
       {/* Stack */}
       <section
         id="stack"
-        className="min-h-screen flex flex-col items-center justify-center"
+        className="min-h-screen flex flex-col items-center justify-center py-28 md:py-0"
       >
         <AnimatedText
           text={t("Stack.title")}
           component="h2"
-          className="font-bold md:text-5xl mb-12"
+          className="font-bold text-4xl md:text-5xl mb-8 md:mb-12"
         />
-        <p className="text-center max-w-[750px] text-lg mb-20 sm:text-xl">
+        <p className="text-center max-w-[750px] text-lg px-4 mb-20 sm:text-xl">
           {t("Stack.description")}
         </p>
         <TechStack />
@@ -47,7 +47,7 @@ export default function Portfolio() {
         <AnimatedText
           text={t("Experience.title")}
           component="h2"
-          className="font-bold md:text-5xl mb-20"
+          className="font-bold text-4xl md:text-5xl mb-12 md:mb-20"
         />
         <Experiences />
       </section>
@@ -60,9 +60,9 @@ export default function Portfolio() {
         <AnimatedText
           text={t("Projects.title")}
           component="h2"
-          className="font-bold md:text-5xl mb-12"
+          className="font-bold text-4xl md:text-5xl mb-8 md:mb-12"
         />
-        <p className="text-center max-w-[750px] text-lg mb-20 sm:text-xl">
+        <p className="text-center max-w-[750px] text-lg px-4 mb-20 sm:text-xl">
           {t("Projects.description")}
         </p>
 
@@ -81,9 +81,9 @@ export default function Portfolio() {
         <AnimatedText
           text={t("Contact.title")}
           component="h2"
-          className="font-bold md:text-5xl mb-12"
+          className="font-bold text-4xl md:text-5xl mb-8 md:mb-12"
         />
-        <p className="text-center max-w-[750px] text-lg mb-12 sm:text-xl">
+        <p className="text-center max-w-[750px] text-lg px-4 mb-12 sm:text-xl">
           {t("Contact.description")}
         </p>
         <NextIntlClientProvider messages={pick(messages, "Index.Contact.form")}>

@@ -45,7 +45,7 @@ export default function Projects() {
         whileInView="reveal"
         viewport={{ once: true }}
         transition={{ staggerChildren: 0.08 }}
-        className="grid gap-4 grid-cols-3"
+        className="grid gap-4 md:grid-cols-2 xl:grid-cols-3"
       >
         {keys.map((key) => (
           <ProjectCard

@@ -9,11 +9,11 @@ export default function Hero() {
   return (
     <section
       id="about"
-      className="relative min-h-screen h-screen mx-auto flex max-w-[980px] flex-col items-center justify-center gap-2 pb-16"
+      className="relative min-h-screen h-screen mx-auto flex max-w-[980px] flex-col items-center justify-center gap-2 pb-16 px-6"
     >
-      <h1 className="text-center text-4xl">Andrés Navarro S.</h1>
-      <AnimatedText text={t("role")} component="h2" className="text-6xl font-bold"/>
-      <p className="max-w-[750px] text-center text-lg text-muted-foreground sm:text-xl">
+      <h1 className="text-center text-2xl mb-2 md:text-4xl">Andrés Navarro S.</h1>
+      <AnimatedText text={t("role")} component="h2" className="text-center text-4xl md:text-5xl font-bold mb-4"/>
+      <p className="max-w-[750px] text-center text-muted-foreground text-lg md:text-xl">
         {t("description")}
       </p>
 

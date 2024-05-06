@@ -25,8 +25,8 @@ export function Experience({
   experience: { startDate, endDate, role, company, description, technologies },
 }: ExperienceProps) {
   return (
-    <article className="grid grid-cols-4 mx-auto gap-4 max-w-[980px]">
-      <div className="col-span-1">
+    <article className="grid grid-cols-3 md:grid-cols-4 mx-auto gap-4 max-w-[980px]">
+      <div className="hidden md:col-span-1 md:block">
         <motion.p
           className="text-muted-foreground"
           initial={{ opacity: 0 }}
@@ -40,7 +40,7 @@ export function Experience({
       <div className="col-span-3">
         <header className="mb-4">
           <motion.h3
-            className="font-bold"
+            className="font-bold text-lg"
             initial="hidden"
             whileInView="reveal"
             viewport={{ once: true }}
@@ -57,7 +57,7 @@ export function Experience({
             ))}
           </motion.h3>
           <motion.h4
-            className="text-muted-foreground"
+            className="text-muted-foreground font-bold"
             initial="hidden"
             whileInView="reveal"
             viewport={{ once: true }}
@@ -73,6 +73,16 @@ export function Experience({
               </motion.span>
             ))}
           </motion.h4>
+
+          <motion.p
+            className="text-muted-foreground md:hidden"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 2 }}
+          >
+            {startDate} - {endDate}
+          </motion.p>
         </header>
         <section className="mb-4">
           <motion.p
@@ -86,7 +96,7 @@ export function Experience({
         </section>
         <footer>
           <motion.ul
-            className="flex gap-2"
+            className="flex flex-wrap gap-2"
             aria-label="Technologies used"
             initial="hidden"
             whileInView="reveal"

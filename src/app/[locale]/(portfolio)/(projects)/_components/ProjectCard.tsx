@@ -43,12 +43,12 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           />
         )}
         <div className="absolute top-0 bottom-0 left-0 right-0 bg-background/80 opacity-0 hover:opacity-100 transition-opacity duration-500 p-6 flex flex-col">
-          <h3 className="text-center font-bold text-2xl mb-6">
+          <h3 className="text-center font-bold text-xl lg:text-2xl mb-2 ">
             {project.title}
           </h3>
           <div className="flex-1 flex flex-col">
-            <p className="text-center mb-8">{project.description}</p>
-            <div className="flex justify-center items-center text-3xl gap-4">
+            <p className="text-center text-md lg:text-lg mb-4">{project.description}</p>
+            <div className="flex justify-center items-center text-2xl lg:text-3xl gap-4">
               {project.repository && (
                 <Link href={project.repository} target="_blank">
                   <SiGithub />
