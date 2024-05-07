@@ -14,10 +14,10 @@ export async function sendContactEmail(prevState: unknown, formData: FormData) {
     return { sucess: false, error: result.error.formErrors.fieldErrors };
 
   const ses = new SES({
-    region: process.env.AWS_SES_REGION,
+    region: process.env.AMAZON_SES_REGION,
     credentials: {
-      accessKeyId: process.env.AWS_ACCESS_KEY_ID as string,
-      secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY as string,
+      accessKeyId: process.env.AMAZON_ACCESS_KEY_ID as string,
+      secretAccessKey: process.env.AMAZON_SECRET_ACCESS_KEY as string,
     },
   });
 
