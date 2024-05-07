@@ -31,8 +31,8 @@ export default function Background() {
 
   const getCellColor = () => {
     const none = { name: "bg-background", chance: 85 };
-    const medium = { name: "bg-muted/80", chance: 12 };
-    const light = { name: "bg-muted-foreground/80", chance: 3 };
+    const medium = { name: "dark:bg-muted/80 bg-secondary-foreground/30", chance: 12 };
+    const light = { name: "dark:bg-muted-foreground/80 bg-muted-foreground", chance: 3 };
 
     const randomNumber = Math.random() * 100;
 
@@ -49,7 +49,7 @@ export default function Background() {
   return (
     <motion.div
       style={{ y }}
-      className="blur-md fixed top-0 left-0 bottom-0 z-[-1] w-full flex"
+      className="blur-md fixed top-0 left-0 bottom-0 z-[-1] w-full flex "
     >
       {cols.map((_, colIndex) => {
         const rows = Array.from(

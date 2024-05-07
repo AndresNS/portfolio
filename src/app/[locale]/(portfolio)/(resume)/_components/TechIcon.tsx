@@ -58,7 +58,7 @@ export default function StackIcon({ name, label, level }: StackIconProps) {
     return Array.from({ length: 5 }, (_, index) => (
       <div
         key={index}
-        className={`w-2 h-2 ${index < level ? "bg-muted-foreground" : "bg-muted"}`}
+        className={`w-2 h-2 ${index < level ? "bg-accent-foreground dark:bg-muted-foreground" : "bg-muted-foreground dark:bg-muted"}`}
       ></div>
     ));
   };
@@ -69,7 +69,7 @@ export default function StackIcon({ name, label, level }: StackIconProps) {
       variants={animationVariants}
       transition={{ duration: 0.5 }}
     >
-      <Icon className="text-5xl mb-8" />
+      <Icon className="text-5xl mb-8 text-secondary-foreground" />
       <div className="relative w-full flex justify-center items-center">
         <p className="absolute group-hover:opacity-0 transition-[opacity] ease-in duration-400">
           {label}
