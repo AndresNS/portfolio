@@ -17,7 +17,7 @@ export default function Footer() {
           </NextIntlClientProvider>
         </div>
         <div className="flex gap-4 text-3xl">
-          <Link href="mailto:andresm.navarro@gmail.com">
+          <Link href="mailto:andresns@pm.me">
             <GrMail />
           </Link>
           <Link href="https://github.com/andresns" target="_blank">

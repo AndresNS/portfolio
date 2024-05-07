@@ -25,7 +25,7 @@ export default function Projects() {
       deployment: null,
     },
     "2": {
-      technologies: ["Next.js", "Shadcn/ui", "Tailwind CSS", "Amazon SES"],
+      technologies: ["Next.js", "Shadcn/ui", "Tailwind CSS", "Amazon SES", "AWS Amplify"],
       thumbnail: portfolioThumbnail,
       repository: "https://github.com/AndresNS/portfolio",
       deployment: null,
