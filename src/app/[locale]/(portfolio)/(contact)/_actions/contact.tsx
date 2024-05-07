@@ -15,10 +15,10 @@ export async function sendContactEmail(prevState: unknown, formData: FormData) {
 
   const ses = new SES({
     region: process.env.AMAZON_SES_REGION,
-    credentials: {
-      accessKeyId: process.env.AMAZON_ACCESS_KEY_ID as string,
-      secretAccessKey: process.env.AMAZON_SECRET_ACCESS_KEY as string,
-    },
+    // credentials: {
+    //   accessKeyId: process.env.AMAZON_ACCESS_KEY_ID as string,
+    //   secretAccessKey: process.env.AMAZON_SECRET_ACCESS_KEY as string,
+    // },
   });
 
   const emailHtml = render(
