@@ -72,32 +72,39 @@
   },
   "Experiences": {
     "1": {
-      "startDate": "Jul 2023",
-      "endDate": "Oct 2023",
-      "role": "Consultor de Desarrollo de Software",
-      "company": "Tester app",
-      "description": "Lideré y asesoré un proyecto colaborativo con una empresa externa, participando en la definición de sus prioridades y requisitos. Aporté soluciones técnicas y recomendaciones basadas en mi experiencia con tecnologías como React, AWS y Serverless Framework. Colaboré en la toma de decisiones con ambos equipos, contribuyendo a la planificación, revisión de hitos clave y ajustes necesarios para lograr un desarrollo eficiente y alineado con los objetivos del proyecto."
+      "startDate": "Sep 2020",
+      "endDate": "Ene 2021",
+      "role": "Practica Profesional Desarrollador",
+      "company": "CORPA Estudios de Mercado",
+      "description": "Durante mi práctica profesional como Desarrollador, me especialicé en el diseño y desarrollo de modelos y patrones de acceso en bases de datos NoSQL, centrándome en DynamoDB. Además, contribuí al diseño y desarrollo de microservicios en entornos cloud de AWS mediante el uso del Serverless Framework. También automatizé procesos CI/CD en entornos de AWS y participé en el diseño y documentación de APIs para facilitar la comunicación efectiva dentro del equipo de desarrollo."
     },
     "2": {
-      "startDate": "Feb 2022",
-      "endDate": "Jun 2023",
-      "role": "Lider Técnico y Desarrollador Full-Stack",
-      "company": "Tester app",
-      "description": "Como líder de un equipo de desarrollo en Tester App, dirigí la creación y entrega de soluciones tecnológicas, centrándome en la arquitectura y desarrollo full stack. Mis responsabilidades incluyeron el diseño de la arquitectura y el desarrollo de aplicaciones con React y Next.js, la creación de bases de datos en DynamoDB, la automatización de procesos de desarrollo mediante flujos de trabajo CI/CD con CodePipeline y CodeBuild, así como la supervisión y capacitación del equipo, con un enfoque humano para fomentar el crecimiento profesional. Establecí una comunicación efectiva con la contraparte comercial y los product managers en proyectos internos y externos."
-    },
-    "3": {
       "startDate": "Feb 2021",
       "endDate": "Sep 2021",
       "role": "Desarrollador Full-Stack",
       "company": "Tester app",
       "description": "Como desarrollador full stack en Tester, me enfoqué en la arquitectura y desarrollo, empleando tecnologías como React y Next.js en el front-end, y AWS con el Serverless Framework en el back-end. Mis responsabilidades incluyeron el diseño y desarrollo de aplicaciones con React, Next.js y servicios de AWS, la colaboración en el diseño y modelado de bases de datos en DynamoDB, y la implementación de flujos de trabajo de desarrollo a través de la automatización de CI/CD utilizando herramientas como CodePipeline y CodeBuild."
     },
+    "3": {
+      "startDate": "Feb 2022",
+      "endDate": "Jun 2023",
+      "role": "Lider Técnico y Desarrollador Full-Stack",
+      "company": "Tester app",
+      "description": "Como líder de un equipo de desarrollo en Tester App, dirigí la creación y entrega de soluciones tecnológicas, centrándome en la arquitectura y desarrollo full stack. Mis responsabilidades incluyeron el diseño de la arquitectura y el desarrollo de aplicaciones con React y Next.js, la creación de bases de datos en DynamoDB, la automatización de procesos de desarrollo mediante flujos de trabajo CI/CD con CodePipeline y CodeBuild, así como la supervisión y capacitación del equipo, con un enfoque humano para fomentar el crecimiento profesional. Establecí una comunicación efectiva con la contraparte comercial y los product managers en proyectos internos y externos."
+    },
     "4": {
-      "startDate": "Sep 2020",
-      "endDate": "Ene 2021",
-      "role": "Practica Profesional Desarrollador",
-      "company": "CORPA Estudios de Mercado",
-      "description": "Durante mi práctica profesional como Desarrollador, me especialicé en el diseño y desarrollo de modelos y patrones de acceso en bases de datos NoSQL, centrándome en DynamoDB. Además, contribuí al diseño y desarrollo de microservicios en entornos cloud de AWS mediante el uso del Serverless Framework. También automatizé procesos CI/CD en entornos de AWS y participé en el diseño y documentación de APIs para facilitar la comunicación efectiva dentro del equipo de desarrollo."
+      "startDate": "Jul 2023",
+      "endDate": "Oct 2023",
+      "role": "Consultor de Desarrollo de Software",
+      "company": "Tester app",
+      "description": "Lideré y asesoré un proyecto colaborativo con una empresa externa, participando en la definición de sus prioridades y requisitos. Aporté soluciones técnicas y recomendaciones basadas en mi experiencia con tecnologías como React, AWS y Serverless Framework. Colaboré en la toma de decisiones con ambos equipos, contribuyendo a la planificación, revisión de hitos clave y ajustes necesarios para lograr un desarrollo eficiente y alineado con los objetivos del proyecto."
+    },
+    "5": {
+      "startDate": "Jun 2024",
+      "endDate": "Actualidad",
+      "role": "Desarrollador Front-End",
+      "company": "SOAINT",
+      "description": "Contribuí al desarrollo de aplicaciones web y mobile, enfocándome en la implementación de interfaces de usuario con React y React Native, integrando flujos de datos eficientes con Redux Saga. Aporté a la implementación de diseño y desarrollo de componentes modulares y reutilizables siguiendo principios de diseño atómico, asegurando la escalabilidad y mantenibilidad del código. Colaboré estrechamente con diseñadores para traducir diseños de Figma en soluciones funcionales, trabajando en equipos multidisciplinarios bajo metodología Scrum para garantizar entregas ágiles y de alta calidad."
     }
   }
 }
